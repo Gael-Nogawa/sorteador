@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log("O valor é: " + numeroMax)
 
 
-        document.getElementById('resultado-valor').innerText = `O valor é ${numeroAleatório}`;
+        document.getElementById('resultado-valor').innerText = `A pessoa sortuda está com número ${numeroAleatório}! Parabéns!`;
         document.querySelector('.resultado').style.display = 'block';
     })
 })
