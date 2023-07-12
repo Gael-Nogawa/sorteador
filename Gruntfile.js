@@ -71,6 +71,10 @@ module.exports = function(grunt){
                         {
                             match: 'ENDERECO_DO_CSS', //Precisa ser em maiusculo
                             replacement: './styles/main.min.css'
+                        },
+                        {
+                            match: 'ENDERECO_DO_JS', //Precisa ser em maiusculo
+                            replacement: './scripts/main.min.js'
                         }
                     ]
                 },
@@ -102,6 +106,7 @@ module.exports = function(grunt){
             target: {
                 files: {
                     'dist/scripts/main.min.js': 'src/scripts/main.js'
+                    //destino                   // origem
                 }
             }
         }
@@ -124,7 +129,7 @@ module.exports = function(grunt){
     })
 
     grunt.registerTask('olaGrunt', function(){
-        const done = this.async();
+        const done = this.async(); // Se não tiver essa constante, o Grunt não percebe que é uma tarefa assincrona, e não executa o console.log;
         setInterval(function(){
             console.log('olá, Grunt!');
             done();
